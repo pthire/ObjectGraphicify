@@ -1,0 +1,5 @@
+allow SVG export
+put eval in function ??
+make code corresponding to object ??
+colors signification are not intuitive ...
+limit array drawing (min .. max) ??

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<!-- OBJECT GRAPHICIFY - Draw graphic representation of JS object -->
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+
+        <style>
+
+			h2 {
+				background-color: lightblue;
+				padding: 10px;
+				border-radius: 10px;
+				width: 90%;
+			}
+
+			.container {
+				border: 1px solid black;
+				width: 90%;
+				border-radius: 10px;
+			}
+
+			#input {
+				padding: 20px;
+				margin: auto;
+				width: 90%;
+				font-family: "Courier, monospace"
+			}
+
+			#json {
+				font-family: "Courier, monospace"
+			}
+
+			#json, #beautifull_json {
+				display: none;
+			}
+
+			pre {
+			    -moz-tab-size:    4; /* Firefox 4+ */
+				-o-tab-size:      4; /* Opera 11.5 & 12.1 only */
+				tab-size:         4; /* Chrome 21+, Safari 6.1+, Opera 15+ */
+			}
+			.string { 
+				color: green; 
+			}
+			.number {
+				color: darkorange;
+			}
+			.boolean { 
+				color: blue; 
+			}
+			.null { 
+				color: magenta; 
+			}
+			.key { 
+				color: red;
+			}
+
+   			.file {
+				float: right;
+			}
+
+			#file {
+				display: none;
+			}
+
+			svg {
+				padding : 10px 10px 10px 10px;
+				display: block;
+				margin: auto;
+			}
+
+			svg text {
+				/* adjust font-size if needed */
+			}
+
+     </style>
+
+		<script type="text/javascript" src="o2svg.js"></script>
+		<script type="text/javascript" src="f_o2svg.js"></script>
+
+    </head>
+
+    <body>
+
+		<h2>OBJECT GRAPHICIFY - Draw graphic representation of JS object</H1>
+
+		<fieldset class="container">
+			<button id="clear">CLEAR</button>
+			<button id="sample_1" class="sample" data-no="1">SAMPLE 1</button>
+			<button id="sample_2" class="sample" data-no="2">SAMPLE 2</button>
+			<button id="sample_3" class="sample" data-no="3">SAMPLE 3</button>
+			<button id="load" class="file">LOAD</button>
+			<button id="save" class="file">SAVE</button>
+			<legend>Construct object with regular JS (object = ....)</legend>
+			<div id="input" contenteditable="true" spellcheck="false">
+			</div>
+		</fieldset>
+
+		<p/>&nbsp;<p/>
+
+		<fieldset class="container">
+			<legend>
+				<button id="drawing_only" data-option="d">DRAWING</button>
+				<button id="json_only" data-option="j">JSON</button>
+				<button id="bjson_only" data-option="bj">BEAUTIFULL JSON</button>
+				<button id="drawing_json" data-option="dj">DRAWING & JSON</button>
+				<button id="drawing_beautifull_json" data-option="dbj">DRAWING & BEAUTIFULL JSON</button>
+				<button id="json_beautifull_json" data-option="jbj">JSON & BEAUTIFULL JSON</button>
+			</legend>
+
+			<p/>
+
+			<div id="beautifull_json"></div>
+			<div id="json"></div>
+
+			<svg version="1.1" width="10" height="10" viewBox="0 0 10 10" baseProfile="full" xmlns="http://www.w3.org/2000/svg">
+			</svg>
+		</fieldset>
+
+		<input type="file" id="file" name="file"/>
+
+    </body>
+</html>
