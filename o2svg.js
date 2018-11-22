@@ -50,7 +50,7 @@ var start = function start() {
 				code_b64 = e.target.result.split(",")[1];
 				code = atob(code_b64);
 
-				eval(code);
+				//eval(code);
 
 				document.querySelector("#input").innerHTML = code.replace(/\n/g,"<br>");
 				o2svg(object, svg_tree);		
@@ -74,7 +74,7 @@ var start = function start() {
 	document.querySelector("#save").addEventListener("click", function() {
 		var content;
 
-		content = document.querySelector("#input").textContent.trim();
+		content = document.querySelector("#input").innerHTML.trim();
 		var textToSaveAsBlob = new Blob([content], {type:"text/plain"});
 		var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
 		var fileNameToSaveAs = fileName;
